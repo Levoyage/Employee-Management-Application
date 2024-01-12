@@ -16,11 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
       - name: Set up Java version
         uses: actions/setup-java@v1
         with:
           java-version: '17'
-          node-version: '16'
 
       - name: Build with Maven
         run: mvn clean install
@@ -38,7 +42,7 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write #This is required for requesting the JWT
+      id-token: write
 
     steps:
       - name: Download artifact from build job
@@ -60,4 +64,3 @@ jobs:
           app-name: 'springboot-demo'
           slot-name: 'Production'
           package: '*.jar'
-          
