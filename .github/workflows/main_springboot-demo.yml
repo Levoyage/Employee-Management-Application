@@ -23,7 +23,7 @@ jobs:
           java-version: '17'
 
       - name: Change to Project Directory
-        run: cd Employee-Management-Application/ems-backend
+        run: cd ems-backend
 
       - name: Build with Maven
         run: mvn clean install
@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/Employee-Management-Application/ems-backend/target/*.jar'
+          path: '${{ github.workspace }}/ems-backend/target/*.jar'
 
   deploy:
     runs-on: windows-latest
