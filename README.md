@@ -1,6 +1,6 @@
 # Employee Management System Project
 
-Welcome to the Employee Management System project! This project is aimed at providing an efficient solution for managing employees and departments within an organization. Below is an overview of the project and its functionalities.
+Welcome to the Employee Management System project! This project is aimed at providing an efficient solution for managing employees and departments within an organization. Below is an overview of the project and its functionalities.(You can find the page previews in the "Frontend Preview" folder.)
 
 ## Project Overview
 
